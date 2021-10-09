@@ -20,7 +20,7 @@
       <input @focus="showLocationSuggestions = true" @blur="showLocationSuggestions = false" autocomplete="off" type="text" id="location-input" :placeholder="locationPlaceholder" v-model="location">
     </label>
     <button id="search-btn" @click="search">
-      <img width="25px" src="../../assets/magnifying.svg" alt="">
+      <img width="20px" src="../../assets/magnifying.svg" alt="">
     </button>
     <ul v-if="locationSuggestions && showLocationSuggestions" id="locationOptions">
       <li v-for="suggestion in locationSuggestions"
@@ -121,13 +121,14 @@ export default {
 <style scoped>
   .container{
     display: inline-grid;
+    grid-template-columns: 1fr 1fr 70px;
   }
 
   #location-container{
     grid-row: 1;
     grid-column: 2;
     font-size: 18px;
-    padding: 11px;
+    padding: 11px 11px 0 ;
     overflow: hidden;
     background-color: #fff;
     box-sizing: border-box;
@@ -137,7 +138,7 @@ export default {
     grid-row: 1;
     content: "";
     width: 1px !important;
-    margin: 0 -11.5px;
+    margin: 0 -10.5px;
     background-color: #ccc;
     z-index: 1;
   }
@@ -146,7 +147,7 @@ export default {
     grid-column: 1;
     font-size: 18px;
     border-radius: 4px 0 0 4px;
-    padding: 11px;
+    padding: 11px 11px 0 ;
     background-color: #fff;
     box-sizing: border-box;
     overflow: hidden;
@@ -177,13 +178,11 @@ export default {
   }
 
   #service-placeholder, #location-placeholder {
-  text-align: left;
   font-family: inherit;
 	font-size: 100%;
   box-sizing: border-box;
 	padding-left: 2.4px;
 	padding-top: 1px;
-  /* padding: 0; */
 	pointer-events: none;
 	opacity: 0.6;
 }
@@ -199,7 +198,6 @@ export default {
   outline: 0;
   box-shadow: none;
   margin-bottom: 12px;
-  /* vertical-align: baseline !important; */
 }
 
 #locationOptions, #serviceOptions{
@@ -244,6 +242,8 @@ export default {
   color: #fff;
   font-weight: 700;
   cursor: pointer;
+  max-height: 46px;
+  vertical-align: middle;
 }
 
 </style>

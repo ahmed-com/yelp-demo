@@ -5,6 +5,7 @@
       serviceTypeahead="Restaurant"
       :serviceSuggestions="serviceSuggestions"
       :locationSuggestions="locationSuggestions"
+      @search="search"
     />
   </div>
 </template>
@@ -41,6 +42,10 @@ export default {
       "E",
     ],
   }),
+
+  methods: {
+    search(){}
+  },
   components: {
     YelpSearch
   }
@@ -54,6 +59,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
   color: #2c3e50;
+  min-height: 1000px;
   background-image: url("https://s3-media0.fl.yelpcdn.com/assets/srv0/yelp_large_assets/8a6cc705477a/assets/img/home/hero_photos/uteUmycsbh0UibXk-At-3A.jpg");
 }
 
