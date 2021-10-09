@@ -1,17 +1,48 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <YelpSearch class="search" v-model="search"
+      servicePlaceholder="service"
+      serviceTypeahead="Restaurant"
+      :serviceSuggestions="serviceSuggestions"
+      :locationSuggestions="locationSuggestions"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import YelpSearch from './components/YelpSearch.vue'
 
 export default {
   name: 'App',
+  data: ()=>({
+    search: {
+      location: "Alex",
+      service: "Restaur"
+    },
+
+    serviceSuggestions: [
+      "Restaurant",
+      "Plumbers",
+      "Delivery",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+    ],
+    locationSuggestions: [
+      "Restaurant",
+      "Plumbers",
+      "Delivery",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+    ],
+  }),
   components: {
-    HelloWorld
+    YelpSearch
   }
 }
 </script>
@@ -21,8 +52,14 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
+  background-image: url("https://s3-media0.fl.yelpcdn.com/assets/srv0/yelp_large_assets/8a6cc705477a/assets/img/home/hero_photos/uteUmycsbh0UibXk-At-3A.jpg");
+}
+
+.search{
   margin-top: 60px;
+  margin-left: 60px ;
+  width: 1000px;
 }
 </style>
