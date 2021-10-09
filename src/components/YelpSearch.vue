@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <label  class="container" id="service-container" for="service-input">
+    <label   id="service-container" for="service-input">
       <span id="service-label">Find</span>
       <span id="service-placeholder" >{{computedServiceTypeahead}}</span>
       <input @focus="showServiceSuggestions = true" @blur="showServiceSuggestions = false" autocomplete="off" type="text" id="service-input" :placeholder="servicePlaceholder" v-model="service">
@@ -13,7 +13,7 @@
 
       >{{suggestion}}</li>
     </ul>
-    <label  class="container" id="location-container" for="location-input">
+    <label   id="location-container" for="location-input">
       <div id="line-break"></div> 
       <span id="location-label">Near</span>
       <span id="location-placeholder" >{{computedLocationTypeahead}}</span>
@@ -125,6 +125,8 @@ export default {
   }
 
   #location-container{
+    display: inline-grid;
+    grid-template-columns: 50px 1fr;
     grid-row: 1;
     grid-column: 2;
     font-size: 18px;
@@ -143,6 +145,8 @@ export default {
     z-index: 1;
   }
   #service-container{
+    display: inline-grid;
+    grid-template-columns: 50px 1fr;
     grid-row: 1;
     grid-column: 1;
     font-size: 18px;
@@ -167,6 +171,7 @@ export default {
 
 
 #location-input, #location-placeholder, #service-input, #service-placeholder{
+  
   grid-column: 2;
   grid-row: 1;
   box-sizing: border-box;
@@ -178,6 +183,7 @@ export default {
   }
 
   #service-placeholder, #location-placeholder {
+    
   font-family: inherit;
 	font-size: 100%;
   box-sizing: border-box;

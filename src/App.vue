@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <YelpSearch class="search" v-model="search"
+    <YelpSearch class="search" v-model="searchInput"
       servicePlaceholder="service"
       serviceTypeahead="Restaurant"
       :serviceSuggestions="serviceSuggestions"
@@ -16,7 +16,7 @@ import YelpSearch from './components/YelpSearch.vue'
 export default {
   name: 'App',
   data: ()=>({
-    search: {
+    searchInput: {
       location: "Alex",
       service: "Restaur"
     },
