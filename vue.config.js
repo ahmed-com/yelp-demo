@@ -3,3 +3,5 @@ module.exports = {
       ? '/yelp-demo/'
       : '/'
   }
+
+  // git subtree push --prefix dist origin gh-pages
