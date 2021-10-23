@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <YelpSearch class="search" v-model="searchInput"
+    <YelpSearchMobile class="search" v-model="searchInput"
       servicePlaceholder="service"
       serviceTypeahead="Restaurant"
       :serviceSuggestions="serviceSuggestions"
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import YelpSearch from './components/YelpSearch.vue'
+import YelpSearchMobile from './components/YelpSearchMobile.vue'
 
 export default {
   name: 'App',
@@ -47,7 +47,7 @@ export default {
     search(){}
   },
   components: {
-    YelpSearch
+    YelpSearchMobile
   }
 }
 </script>
@@ -64,7 +64,7 @@ body{
   /* text-align: center; */
   color: #2c3e50;
   min-height: 1000px;
-  background-image: url("https://s3-media0.fl.yelpcdn.com/assets/srv0/yelp_large_assets/8a6cc705477a/assets/img/home/hero_photos/uteUmycsbh0UibXk-At-3A.jpg");
+  background-color: lightblue;
 }
 
 .search{

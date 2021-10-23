@@ -14,7 +14,7 @@
       >{{suggestion}}</li>
     </ul>
     <label   id="location-container" for="location-input">
-      <div id="line-break"></div> 
+    <div id="line-break"></div> 
       <span id="location-label">Near</span>
       <span id="location-placeholder" >{{computedLocationTypeahead}}</span>
       <input @focus="showLocationSuggestions = true" @blur="showLocationSuggestions = false" autocomplete="off" type="text" id="location-input" :placeholder="locationPlaceholder" v-model="location">
